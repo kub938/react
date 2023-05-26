@@ -4,7 +4,7 @@ function Post(props) {
 
     return (
         <li className={styles.post}>
-            <p clsaaName={styles.author}>{props.author}</p>
+            <p className={styles.author}>{props.author}</p>
             <p className={styles.text}>{props.body}</p>
         </li>
     );
