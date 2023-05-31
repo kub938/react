@@ -5,6 +5,7 @@ import NewPost from './NewPost'
 import styles from './PostsList.module.css'
 import PTCoponet from './PtCoponet'
 import PtOutput from './PtOutput'
+import Modal from './Modal'
 
 function PostsList() {
     const [enteredBody, setEnteredBody] = useState('내용');
@@ -24,7 +25,12 @@ function PostsList() {
     }
     return (
         <>
-            <NewPost onBodyChange={bodyChangeHandler} onNameChange={nameChangeHandler} />
+            <Modal>
+                <NewPost
+                    onBodyChange={bodyChangeHandler}
+                    onNameChange={nameChangeHandler}
+                />
+            </Modal>
             <ul className={styles.posts}>
                 <Post author={enterName} body={enteredBody} />
                 <Post author="Manuel" body="nice centence" />
